@@ -207,9 +207,6 @@
   }
 }
 @layer utilities {
-  .pointer-events-auto {
-    pointer-events: auto;
-  }
   .absolute {
     position: absolute;
   }
@@ -221,6 +218,12 @@
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-2 {
+    bottom: calc(var(--spacing) * 2);
+  }
+  .bottom-5 {
+    bottom: calc(var(--spacing) * 5);
   }
   .z-0 {
     z-index: 0;
@@ -255,9 +258,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -278,12 +278,6 @@
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -308,9 +302,6 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
-  }
-  .h-64 {
-    height: calc(var(--spacing) * 64);
   }
   .h-auto {
     height: auto;
@@ -339,9 +330,6 @@
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
-  .max-w-xs {
-    max-width: var(--container-xs);
-  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -351,12 +339,6 @@
   .motion-scale-in {
     --motion-origin-scale-x: 50%;
     --motion-origin-scale-y: 50%;
-    --motion-scale-in-animation: motion-scale-in calc(var(--motion-scale-duration, var(--motion-duration)) * var(--motion-scale-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-scale-timing, var(--motion-timing)) var(--motion-scale-delay, var(--motion-delay)) both;
-    animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
-  }
-  .motion-scale-in-\[0\.2\] {
-    --motion-origin-scale-x: 0.2;
-    --motion-origin-scale-y: 0.2;
     --motion-scale-in-animation: motion-scale-in calc(var(--motion-scale-duration, var(--motion-duration)) * var(--motion-scale-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-scale-timing, var(--motion-timing)) var(--motion-scale-delay, var(--motion-delay)) both;
     animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
   }
@@ -371,11 +353,6 @@
     --motion-end-scale-y: 50%;
     --motion-scale-out-animation: motion-scale-out calc(var(--motion-scale-duration, var(--motion-duration)) * var(--motion-scale-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-scale-timing, var(--motion-timing)) var(--motion-scale-delay, var(--motion-delay)) both;
     animation: var(--motion-scale-out-animation), var(--motion-translate-out-animation), var(--motion-rotate-out-animation), var(--motion-filter-out-animation), var(--motion-opacity-out-animation), var(--motion-background-color-out-animation), var(--motion-text-color-out-animation);
-  }
-  .motion-blur-in-\[80px\] {
-    --motion-origin-blur: 80px;
-    --motion-filter-in-animation: motion-filter-in calc(var(--motion-filter-duration, var(--motion-duration)) * var(--motion-filter-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-filter-timing, var(--motion-timing)) var(--motion-filter-delay, var(--motion-delay)) both;
-    animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
   }
   .motion-blur-in-\[100px\] {
     --motion-origin-blur: 100px;
@@ -407,11 +384,6 @@
     --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration, var(--motion-duration)) * var(--motion-translate-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-translate-timing, var(--motion-timing)) var(--motion-translate-delay, var(--motion-delay)) both;
     animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
   }
-  .motion-translate-y-in-\[75\%\] {
-    --motion-origin-translate-y: 75%;
-    --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration, var(--motion-duration)) * var(--motion-translate-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-translate-timing, var(--motion-timing)) var(--motion-translate-delay, var(--motion-delay)) both;
-    animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
-  }
   .motion-translate-y-in-\[100\%\] {
     --motion-origin-translate-y: 100%;
     --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration, var(--motion-duration)) * var(--motion-translate-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-translate-timing, var(--motion-timing)) var(--motion-translate-delay, var(--motion-delay)) both;
@@ -429,9 +401,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
   .items-center {
     align-items: center;
   }
@@ -447,9 +416,6 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -463,23 +429,17 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-0 {
-    border-style: var(--tw-border-style);
-    border-width: 0px;
-  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-4 {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
   }
-  .border-blue-200 {
-    border-color: var(--color-blue-200);
-  }
-  .border-pink-200 {
-    border-color: var(--color-pink-200);
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
   }
   .border-white {
     border-color: var(--color-white);
@@ -492,9 +452,6 @@
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
   }
   .bg-pink-50 {
     background-color: var(--color-pink-50);
@@ -511,22 +468,6 @@
       background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
   }
-  .bg-white\/80 {
-    background-color: color-mix(in srgb, #fff 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
-    }
-  }
-  .bg-white\/90 {
-    background-color: color-mix(in srgb, #fff 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
-    }
-  }
-  .bg-gradient-to-r {
-    --tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
   .bg-gradient-to-t {
     --tw-gradient-position: to top in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -535,26 +476,10 @@
     --tw-gradient-from: var(--color-black);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-pink-200 {
-    --tw-gradient-from: var(--color-pink-200);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .via-black {
     --tw-gradient-via: var(--color-black);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
-  }
-  .via-black\/80 {
-    --tw-gradient-via: color-mix(in srgb, #000 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-via: color-mix(in oklab, var(--color-black) 80%, transparent);
-    }
-    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-via-stops);
-  }
-  .to-pink-400 {
-    --tw-gradient-to: var(--color-pink-400);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-transparent {
     --tw-gradient-to: transparent;
@@ -596,17 +521,14 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .pt-2 {
-    padding-top: calc(var(--spacing) * 2);
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .text-center {
     text-align: center;
@@ -614,13 +536,13 @@
   .font-utama {
     font-family: var(--font-utama);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -638,10 +560,6 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -652,18 +570,6 @@
   }
   .text-black {
     color: var(--color-black);
-  }
-  .text-blue-500 {
-    color: var(--color-blue-500);
-  }
-  .text-gray-600 {
-    color: var(--color-gray-600);
-  }
-  .text-gray-700 {
-    color: var(--color-gray-700);
-  }
-  .text-pink-500 {
-    color: var(--color-pink-500);
   }
   .text-red-600 {
     color: var(--color-red-600);
@@ -727,28 +633,8 @@
   .motion-delay-\[2600ms\] {
     --motion-delay: 2600ms;
   }
-  .motion-delay-\[3000ms\] {
-    --motion-delay: 3000ms;
-  }
-  .motion-duration-\[0\.50s\]\/blur {
-    --motion-filter-duration: 0.50s;
-  }
-  .motion-duration-\[0\.51s\]\/translate {
-    --motion-translate-duration: 0.51s;
-  }
-  .motion-duration-\[1\.00s\]\/scale {
-    --motion-scale-duration: 1.00s;
-  }
   .motion-duration-\[1\.88s\] {
     --motion-duration: 1.88s;
-  }
-  .hover\:-translate-y-1 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * -1);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
   }
   .hover\:scale-105 {
     &:hover {
@@ -764,13 +650,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-black);
-      }
-    }
-  }
-  .hover\:bg-blue-600 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-600);
       }
     }
   }
@@ -792,14 +671,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
-      }
-    }
-  }
-  .hover\:shadow-xl {
-    &:hover {
-      @media (hover: hover) {
-        --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
   }
@@ -836,9 +707,9 @@
       width: calc(1/3 * 100%);
     }
   }
-  .md\:max-w-1\/3 {
+  .md\:max-w-1\/2 {
     @media (width >= 48rem) {
-      max-width: calc(1/3 * 100%);
+      max-width: calc(1/2 * 100%);
     }
   }
   .md\:flex-row {
@@ -861,16 +732,6 @@
       gap: calc(var(--spacing) * 10);
     }
   }
-  .md\:py-3 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 3);
-    }
-  }
-  .md\:pt-3 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 3);
-    }
-  }
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
@@ -887,12 +748,6 @@
     @media (width >= 48rem) {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
-    }
-  }
-  .md\:text-sm {
-    @media (width >= 48rem) {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
   .md\:text-xl {
@@ -1642,21 +1497,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1745,9 +1585,6 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
