@@ -41,7 +41,7 @@ const Buka = () => {
           staggerDuration={0.05}
           splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          rotationInterval={4500}
+          rotationInterval={4000}
         />
         <div className="space-y-1 p-3 sm:p-4 md:p-5 w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] bg-gray-500/30 text-white flex flex-col justify-center items-center rounded-2xl">
           <div className="text-xs sm:text-sm font-bold text-center font-utama">

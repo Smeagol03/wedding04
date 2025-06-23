@@ -19,10 +19,21 @@
       background-position: 0% 50%;
     }
   }
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
 }
 
 @layer utilities {
   .animate-gradient {
     animation: gradient 8s linear infinite;
+  }
+  .animate-shine {
+    animation: shine 5s linear infinite;
   }
 }
