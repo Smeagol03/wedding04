@@ -1,7 +1,7 @@
 import React from "react";
 import Couple from "/mempelai/1.jpg";
-import GradientText from "../GradientText/GradientText";
-import RotatingText from "../RotatingText/RotatingText";
+import GradientText from "../reactbits/GradientText/GradientText";
+import RotatingText from "../reactbits/RotatingText/RotatingText";
 
 const Buka = () => {
   return (
@@ -18,10 +18,10 @@ const Buka = () => {
       <div className="absolute inset-0 flex gap-2 sm:gap-5 md:gap-[20px] flex-col content-center items-center justify-end z-10 text-white pb-14 md:pb-16 px-4 sm:px-6 md:px-8">
         <GradientText
           colors={[
-            "#1E1E1E",
-            "#4A4A4A",
-            "#808080",
-            "#A9A9A9",
+            "#fef08a",
+            "#fca5a5",
+            "#fecaca",
+            "#fecdd3",
             "#D3D3D3",
             "#FFFFFF",
           ]}
