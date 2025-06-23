@@ -15,7 +15,7 @@ const Buka = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
       </div>
-      <div className="absolute inset-0 flex gap-2 sm:gap-5 md:gap-[20px] flex-col content-center items-center justify-end z-10 text-white pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-8">
+      <div className="absolute inset-0 flex gap-2 sm:gap-5 md:gap-[20px] flex-col content-center items-center justify-end z-10 text-white pb-14 md:pb-16 px-4 sm:px-6 md:px-8">
         <GradientText
           colors={[
             "#1E1E1E",
