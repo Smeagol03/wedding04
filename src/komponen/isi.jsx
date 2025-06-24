@@ -11,7 +11,7 @@ const Isi = () => {
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={400}
           particleSpread={10}
-          speed={0.1}
+          speed={0.05}
           particleBaseSize={100}
           moveParticlesOnHover={true}
           alphaParticles={false}

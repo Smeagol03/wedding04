@@ -1,11 +1,122 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Couple from "/mempelai/1.jpg";
 import GradientText from "../reactbits/GradientText/GradientText";
 import RotatingText from "../reactbits/RotatingText/RotatingText";
 
 const Buka = () => {
+  // State untuk melacak status musik dan tampilan
+  const [isMuted, setIsMuted] = useState(false);
+  const [isInvitationOpen, setIsInvitationOpen] = useState(false);
+  
+  // Referensi untuk audio player
+  const audioRef = React.useRef(null);
+
+  // Effect untuk menangani refresh halaman dan gulir ke atas
+  useEffect(() => {
+    // Gulir ke atas halaman saat komponen dimuat
+    window.scrollTo(0, 0);
+    
+    // Reset status undangan
+    setIsInvitationOpen(false);
+    
+    // Menangani sebelum refresh/menutup halaman
+    const handleBeforeUnload = () => {
+      // Gulir ke atas halaman
+      window.scrollTo(0, 0);
+    };
+    
+    // Tambahkan event listener
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    // Cleanup function
+    return () => {
+      // Hapus event listener
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+  
+  // Effect untuk menonaktifkan scroll dan mengatur audio
+  useEffect(() => {
+    // Menonaktifkan scroll
+    document.body.style.overflow = 'hidden';
+    
+    // Membuat elemen audio
+    audioRef.current = new Audio('/musik.mp3');
+    audioRef.current.loop = true; // Mengatur musik untuk diputar berulang
+    
+    // Cleanup function
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = '';
+      }
+    };
+  }, []);
+
+  // Fungsi untuk menangani klik tombol "Buka Undangan"
+  const handleOpenInvitation = () => {
+    // Mengaktifkan scroll
+    document.body.style.overflow = 'auto';
+    
+    // Menggulir ke section dengan id="isi"
+    const isiSection = document.getElementById('isi');
+    if (isiSection) {
+      isiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Memutar musik
+    if (audioRef.current) {
+      // Menambahkan event listener untuk mengatasi kebijakan autoplay browser
+      const playPromise = audioRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Autoplay prevented by browser policy:', error);
+          // Menampilkan pesan atau UI untuk meminta interaksi pengguna jika diperlukan
+        });
+      }
+    }
+    
+    // Mengubah state untuk menampilkan kontrol audio
+    setIsInvitationOpen(true);
+  };
+  
+  // Fungsi untuk mematikan/menghidupkan suara
+  const toggleMute = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = !audioRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  // Komponen untuk kontrol audio
+  const AudioControl = () => {
+    if (!isInvitationOpen) return null;
+    
+    return (
+      <div className="fixed bottom-5 right-5 z-50 bg-black/30 backdrop-blur-sm p-2 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:bg-black/50"
+           onClick={toggleMute}>
+        {isMuted ? (
+          // Ikon untuk audio muted
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clipRule="evenodd" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          </svg>
+        ) : (
+          // Ikon untuk audio playing
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+        )}
+      </div>
+    );
+  };
+
   return (
     <>
+      {/* Kontrol Audio */}
+      <AudioControl />
+      
       <div className="relative w-full h-screen overflow-hidden">
         <img
           src={Couple}
@@ -55,6 +166,7 @@ const Buka = () => {
         <button
           id="buka_undangan"
           className="border border-white hover:bg-white text-white hover:text-black font-semibold px-6 sm:px-7 md:px-8 py-1 sm:py-2.5 md:py-3 text-sm sm:text-base md:text-lg rounded-full transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl animate-pulse hover:animate-none flex items-center"
+          onClick={handleOpenInvitation}
         >
           Buka Undangan
         </button>
