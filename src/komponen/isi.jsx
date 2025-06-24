@@ -7,7 +7,7 @@ const Isi = () => {
   return (
     <section
       id="isi"
-      className="bg-gradient-to-b from-black via-purple-900/75 to-black text-white py-20 relative"
+      className="bg-gradient-to-b from-black via-slate-900 to-black text-white py-20 relative"
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <Particles
@@ -20,7 +20,6 @@ const Isi = () => {
           alphaParticles={false}
           disableRotation={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
       </div>
       <div className="container mx-auto px-5 md:px-12 relative z-10">
         <div className="flex flex-col items-center justify-center text-center mb-16">
@@ -40,7 +39,7 @@ const Isi = () => {
 
         <div className="grid md:grid-cols-2 gap-20 md:gap-36 items-center">
           <div className="flex flex-col items-center ml-0 md:ml-auto">
-            <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-yellow-600">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden mb-6 border-4 border-yellow-600">
               <img
                 src={Pria}
                 alt="Groom"
@@ -54,7 +53,7 @@ const Isi = () => {
           </div>
 
           <div className="flex flex-col items-center mr-0 md:mr-auto">
-            <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-yellow-600">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden mb-6 border-4 border-yellow-600">
               <img
                 src={Wanita}
                 alt="Bride"

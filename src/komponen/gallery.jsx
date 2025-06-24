@@ -5,7 +5,7 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="py-20 bg-gradient-to-t from-black via-gray-600 to-black"
+      className="py-20 bg-gradient-to-t from-black via-purple-950 to-black"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
