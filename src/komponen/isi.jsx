@@ -5,14 +5,17 @@ import Particles from "../reactbits/Particles/Particles";
 
 const Isi = () => {
   return (
-    <section id="isi" className="bg-black text-white py-20 relative">
+    <section
+      id="isi"
+      className="bg-gradient-to-b from-black via-purple-900/75 to-black text-white py-20 relative"
+    >
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={400}
           particleSpread={10}
           speed={0.05}
-          particleBaseSize={100}
+          particleBaseSize={70}
           moveParticlesOnHover={true}
           alphaParticles={false}
           disableRotation={false}
