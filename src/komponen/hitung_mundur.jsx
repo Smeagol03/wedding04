@@ -146,9 +146,9 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
         </div>
 
         {isRunning ? (
-          <div className="flex justify-center items-center flex-wrap gap-2 md:gap-6 max-w-4xl mx-auto">
+          <div className="flex justify-center items-center flex-wrap gap-2 md:gap-6 mx-auto">
             {/* Unit Hari */}
-            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300">
+            <div className="flex flex-col items-center text-center font-utama transform hover:scale-105 transition-transform duration-300">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.hari)}
@@ -160,7 +160,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Jam */}
-            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
+            <div className="flex flex-col items-center text-center font-utama transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.jam)}
@@ -172,7 +172,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Menit */}
-            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
+            <div className="flex flex-col items-center text-center font-utama transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.menit)}
@@ -184,7 +184,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Detik */}
-            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
+            <div className="flex flex-col items-center text-center font-utama transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.detik)}
