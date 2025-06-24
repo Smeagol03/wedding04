@@ -124,7 +124,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
   return (
     <section
       id="countdown"
-      className="py-16 md:py-24 relative overflow-hidden min-h-screen"
+      className="py-16 md:py-24 relative overflow-hidden min-h-screen flex items-center justify-center"
     >
       <AnimasiKustom />
       <div className="absolute inset-0 z-0">
@@ -135,7 +135,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-head font-bold text-white mb-4 animate-fade-in-down">
             Menuju Hari Bahagia
