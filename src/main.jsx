@@ -11,6 +11,6 @@ createRoot(document.getElementById("root")).render(
     <Buka />
     <Isi />
     <Gallery />
-    <Countdown tanggalAcara="2025-07-31T00:00:00" />
+    <Countdown tanggalAcara="2025-07-24T10:00:00" />
   </StrictMode>
 );

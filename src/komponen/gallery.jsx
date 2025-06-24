@@ -9,7 +9,7 @@ const Gallery = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-head font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-head font-bold text-white mb-4">
             Our Love Journey
           </h2>
           <p className="font-utama text-white max-w-2xl mx-auto">

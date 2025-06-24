@@ -134,7 +134,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-head font-bold text-white mb-4 animate-fade-in-down">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-head font-bold text-white mb-4 animate-fade-in-down">
             Menuju Hari Bahagia
           </h2>
           <div className="h-0.5 w-24 bg-gradient-to-r from-pink-500 to-yellow-500 mx-auto mb-6 animate-width-expand"></div>
@@ -160,10 +160,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Jam */}
-            <div
-              className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in"
-              style={{ animationDelay: "0.1s" }}
-            >
+            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.jam)}
@@ -175,10 +172,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Menit */}
-            <div
-              className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.menit)}
@@ -190,10 +184,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             </div>
 
             {/* Unit Detik */}
-            <div
-              className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
+            <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
                 <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.detik)}
@@ -222,10 +213,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
           </div>
         )}
 
-        <div
-          className="mt-12 text-center animate-fade-in"
-          style={{ animationDelay: "0.5s" }}
-        >
+        <div className="mt-12 text-center animate-fade-in">
           <div className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 p-px rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg">
             <a
               href={`https://www.google.com/calendar/render?action=TEMPLATE&text=Acara+Pernikahan&dates=${tanggalAcara
@@ -233,7 +221,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
                 .replace("T", "/")}Z&details=Lokasi+acara+dan+detail+lainnya`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black/80 hover:bg-black/60 transition-colors duration-300 text-white py-3 px-8 rounded-full inline-block font-medium"
+              className="bg-black/80 hover:bg-black/60 transition-colors duration-300 text-white py-3 px-8 rounded-full inline-block font-utama font-medium"
             >
               Tambahkan ke Kalender
             </a>
