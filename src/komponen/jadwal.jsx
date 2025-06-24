@@ -13,7 +13,7 @@ const Jadwal = () => {
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-50">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={1}

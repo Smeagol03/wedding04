@@ -125,7 +125,7 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
     <section id="countdown" className="py-16 md:py-24 relative overflow-hidden">
       <AnimasiKustom />
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/80 to-black"></div>
         <div className="absolute inset-0 opacity-20">
           {/* Efek bintang-bintang untuk background */}
           <div className="stars"></div>
@@ -146,15 +146,15 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
         </div>
 
         {isRunning ? (
-          <div className="flex justify-center items-center flex-wrap gap-5 md:gap-6 max-w-4xl mx-auto">
+          <div className="flex justify-center items-center flex-wrap gap-2 md:gap-6 max-w-4xl mx-auto">
             {/* Unit Hari */}
             <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
-                <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
+                <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.hari)}
                 </div>
               </div>
-              <div className="text-base text-white uppercase tracking-wider font-medium md:text-lg">
+              <div className="text-sm text-white uppercase tracking-wider font-medium md:text-lg">
                 Hari
               </div>
             </div>
@@ -162,11 +162,11 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             {/* Unit Jam */}
             <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
-                <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
+                <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.jam)}
                 </div>
               </div>
-              <div className="text-base text-white uppercase tracking-wider font-medium md:text-lg">
+              <div className="text-sm text-white uppercase tracking-wider font-medium md:text-lg">
                 Jam
               </div>
             </div>
@@ -174,11 +174,11 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             {/* Unit Menit */}
             <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
-                <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
+                <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.menit)}
                 </div>
               </div>
-              <div className="text-base text-white uppercase tracking-wider font-medium md:text-lg">
+              <div className="text-sm text-white uppercase tracking-wider font-medium md:text-lg">
                 Menit
               </div>
             </div>
@@ -186,11 +186,11 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
             {/* Unit Detik */}
             <div className="flex flex-col items-center text-center font-utama min-w-[90px] md:min-w-[120px] transform hover:scale-105 transition-transform duration-300 animate-fade-in">
               <div className="bg-gradient-to-br from-purple-500/80 to-pink-500/80 p-4 shadow-lg mb-2 backdrop-blur-sm border border-white/10">
-                <div className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
+                <div className="text-lg font-bold text-white drop-shadow-md md:text-5xl">
                   {formatAngka(waktuTersisa.detik)}
                 </div>
               </div>
-              <div className="text-base text-white uppercase tracking-wider font-medium md:text-lg">
+              <div className="text-sm text-white uppercase tracking-wider font-medium md:text-lg">
                 Detik
               </div>
             </div>
