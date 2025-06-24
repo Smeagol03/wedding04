@@ -122,7 +122,10 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
   };
 
   return (
-    <section id="countdown" className="py-16 md:py-24 relative overflow-hidden">
+    <section
+      id="countdown"
+      className="py-16 md:py-24 relative overflow-hidden min-h-screen"
+    >
       <AnimasiKustom />
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/80 to-black"></div>
