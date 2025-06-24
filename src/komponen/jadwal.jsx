@@ -16,9 +16,9 @@ const Jadwal = () => {
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-          blend={0.5}
+          blend={1}
           amplitude={0.2}
-          speed={0.5}
+          speed={1.5}
         />
         {/* <div className="absolute -top-36 -left-24 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse opacity-10"></div>
         <div className="absolute top-1/3 -right-24 w-80 h-80 bg-purple-500 rounded-full filter blur-3xl animate-pulse opacity-10"></div>
@@ -29,7 +29,7 @@ const Jadwal = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3 font-head">Jadwal Acara</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-300 max-w-xl mx-auto">
+          <p className="mt-4 text-gray-300 max-w-xl mx-auto font-utama">
             Kami mengundang Anda untuk berbagi momen bahagia dalam perayaan
             cinta kami
           </p>
@@ -167,37 +167,22 @@ const Jadwal = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center font-utama">
           <div className="inline-flex items-center justify-center">
             <div className="h-px w-12 bg-white/30"></div>
             <FaHeart className="mx-4 text-pink-500 animate-pulse" />
             <div className="h-px w-12 bg-white/30"></div>
           </div>
-          <p className="mt-6 text-white/80 italic max-w-lg mx-auto opacity-0 delay-400">
+          <p className="mt-6 text-white/80 italic max-w-lg mx-auto">
             "Kehadiran dan doa restu Anda merupakan hadiah terindah bagi kami"
           </p>
           <div className="mt-8">
-            <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center mx-auto opacity-0 delay-400">
+            <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center mx-auto">
               <FaCalendarAlt className="mr-2" /> Tambahkan ke Kalender
             </button>
           </div>
         </div>
       </div>
-
-      {/* Decorative bottom wave */}
-      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="w-full h-auto"
-        >
-          <path
-            fill="#000000"
-            fillOpacity="1"
-            d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </div> */}
     </section>
   );
 };

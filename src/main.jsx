@@ -6,12 +6,15 @@ import Isi from "./komponen/isi";
 import Gallery from "./komponen/gallery";
 import Countdown from "./komponen/hitung_mundur";
 import Jadwal from "./komponen/jadwal";
+import Poto from "./komponen/potopoto";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Buka />
     <Isi />
     <Gallery />
     <Countdown tanggalAcara="2025-07-24T10:00:00" />
     <Jadwal />
+    <Poto />
   </StrictMode>
 );
