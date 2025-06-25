@@ -7,20 +7,19 @@ import {
   FaGlassCheers,
 } from "react-icons/fa";
 import { MdLocationOn, MdDateRange, MdAccessTime } from "react-icons/md";
-import Aurora from "../reactbits/Aurora/Aurora";
 
 const Jadwal = () => {
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
       {/* Background decorative elements */}
-      <div className="absolute bottom-0 left-0 w-full h-full opacity-80 scale-y-[-1]">
+      {/* <div className="absolute bottom-0 left-0 w-full h-full opacity-80 scale-y-[-1]">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={1}
           amplitude={0.2}
           speed={1.5}
         />
-      </div>
+      </div> */}
 
       <div className="container relative mx-auto px-4 py-10 text-white z-10">
         <div className="text-center mb-12">
