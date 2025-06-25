@@ -13,16 +13,13 @@ const Jadwal = () => {
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-50">
+      <div className="absolute bottom-0 left-0 w-full h-full opacity-80 scale-y-[-1]">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={1}
           amplitude={0.2}
           speed={1.5}
         />
-        {/* <div className="absolute -top-36 -left-24 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse opacity-10"></div>
-        <div className="absolute top-1/3 -right-24 w-80 h-80 bg-purple-500 rounded-full filter blur-3xl animate-pulse opacity-10"></div>
-        <div className="absolute -bottom-24 left-1/3 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse opacity-10"></div> */}
       </div>
 
       <div className="container relative mx-auto px-4 py-10 text-white z-10">

@@ -1,4 +1,5 @@
 import React from "react";
+import Aurora from "../reactbits/Aurora/Aurora";
 
 const items = [
   {
@@ -43,9 +44,17 @@ const Poto = () => {
   return (
     <section
       id="poto"
-      className="relative py-8 bg-gradient-to-b from-black to-purple-900"
+      className="relative py-8 bg-gradient-to-b from-black to-purple-900 overflow-hidden"
     >
-      <div className="container mx-auto px-4 font-utama">
+      <div className="absolute top-0 left-0 w-full h-full opacity-80 z-10">
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={1}
+          amplitude={0.2}
+          speed={1.5}
+        />
+      </div>
+      <div className="container mx-auto px-4 font-utama z-20 relative">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 font-head">
             Our Gallery
