@@ -704,7 +704,7 @@ const Komentar = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full px-5 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
-              placeholder="Masukkan nama Anda"
+              placeholder="Nama"
             />
           </div>
           <div>
@@ -720,7 +720,7 @@ const Komentar = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full px-5 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
-              placeholder="Tulis ucapan dan doa untuk kedua mempelai..."
+              placeholder="Ucapan dan doa"
             ></textarea>
           </div>
           {submitStatus.show && (
@@ -800,7 +800,7 @@ const Komentar = () => {
           Ucapan Tamu
         </h2>
 
-        {/* Example Comment */}
+        {/* komen muncul disini */}
         <div
           id="komentarDisini"
           className="space-y-6 max-h-[500px] overflow-y-auto p-4 [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar]:w-2"
