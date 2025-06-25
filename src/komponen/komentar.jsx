@@ -373,7 +373,7 @@ const Komentar = () => {
     }
 
     // Batasi panjang input
-    const maxLength = type === "Nama" ? 50 : 500;
+    const maxLength = type === "Nama" ? 50 : 800;
     if (input.length > maxLength) {
       return {
         valid: false,
