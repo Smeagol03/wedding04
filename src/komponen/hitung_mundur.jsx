@@ -1,72 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-// Definisi animasi kustom dengan CSS-in-JS untuk digunakan dengan Tailwind
-// Animasi ini akan ditambahkan ke head dokumen saat komponen dimuat
-const AnimasiKustom = () => {
-  useEffect(() => {
-    // Membuat elemen style
-    const styleElement = document.createElement("style");
-    styleElement.innerHTML = `
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-      
-      @keyframes widthExpand {
-        from { width: 0; }
-        to { width: 6rem; }
-      }
-      
-      @keyframes twinkle {
-        0% { opacity: 0.3; }
-        50% { opacity: 1; }
-        100% { opacity: 0.3; }
-      }
-      
-      @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0px); }
-      }
-      
-      .stars {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
-                    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px),
-                    radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
-        background-size: 100px 100px, 200px 200px, 150px 150px;
-        background-position: 0 0, 40px 60px, 130px 270px;
-        animation: float 5s ease-in-out infinite;
-      }
-    `;
-
-    // Menambahkan elemen style ke head
-    document.head.appendChild(styleElement);
-
-    // Cleanup function untuk menghapus elemen style saat komponen unmount
-    return () => {
-      document.head.removeChild(styleElement);
-    };
-  }, []);
-
-  return null;
-};
+import Particles from "../reactbits/Particles/Particles";
 
 const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
   const [waktuTersisa, setWaktuTersisa] = useState({
@@ -126,13 +59,18 @@ const HitungMundur = ({ tanggalAcara = "2024-12-31T00:00:00" }) => {
       id="countdown"
       className="py-16 md:py-24 relative overflow-hidden min-h-screen flex items-center justify-center"
     >
-      <AnimasiKustom />
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/80 to-black"></div>
-        <div className="absolute inset-0 opacity-20">
-          {/* Efek bintang-bintang untuk background */}
-          <div className="stars"></div>
-        </div>
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={400}
+          particleSpread={10}
+          speed={0.05}
+          particleBaseSize={30}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">

@@ -1,7 +1,9 @@
-import React from "react";
+import { useMediaQuery } from "react-responsive";
 import CircularGallery from "../reactbits/CircularGallery/CircularGallery";
 
 const Gallery = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
   return (
     <section
       id="gallery"
@@ -19,8 +21,12 @@ const Gallery = () => {
           </p>
         </div>
         {/* taruh gallery disini */}
-        <div className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative">
-          <CircularGallery bend={1} textColor="#ffffff" borderRadius={0.05} />
+        <div className="h-[400px] md:h-[500px] lg:h-[600px] relative">
+          <CircularGallery
+            bend={isDesktop ? 1 : 0}
+            textColor="#ffffff"
+            borderRadius={0.05}
+          />
         </div>
         <div className="text-center mt-12">
           <a href="#countdown">

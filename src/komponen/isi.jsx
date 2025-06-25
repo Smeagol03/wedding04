@@ -15,7 +15,7 @@ const Isi = () => {
           particleCount={400}
           particleSpread={10}
           speed={0.05}
-          particleBaseSize={70}
+          particleBaseSize={30}
           moveParticlesOnHover={true}
           alphaParticles={false}
           disableRotation={false}
