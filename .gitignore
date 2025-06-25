@@ -10,7 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+firebase-debug.log*
+firebase-debug.*.log
+firebase-rules.json
+README-KOMENTAR.md
+SECURITY.md
 
 # Editor directories and files
 .vscode/*

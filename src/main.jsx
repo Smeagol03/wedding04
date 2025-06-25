@@ -7,6 +7,7 @@ import Gallery from "./komponen/gallery";
 import Countdown from "./komponen/hitung_mundur";
 import Jadwal from "./komponen/jadwal";
 import Poto from "./komponen/potopoto";
+import Komentar from "./komponen/komentar";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
     <Countdown tanggalAcara="2025-07-24T10:00:00" />
     <Jadwal />
     <Poto />
+    <Komentar />
   </StrictMode>
 );

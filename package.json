@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
+    "firebase": "^11.9.1",
     "framer-motion": "^12.18.1",
+    "frimousse": "^0.2.0",
     "gsap": "^3.13.0",
     "ogl": "^1.0.11",
     "react": "^19.1.0",
