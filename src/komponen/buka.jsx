@@ -162,14 +162,7 @@ const Buka = () => {
       </div>
       <div className="absolute inset-0 flex gap-2 sm:gap-5 md:gap-[20px] flex-col content-center items-center justify-end z-10 text-white pb-14 md:pb-16 px-4 sm:px-6 md:px-8">
         <GradientText
-          colors={[
-            "#fef08a",
-            "#fca5a5",
-            "#fecaca",
-            "#fecdd3",
-            "#D3D3D3",
-            "#FFFFFF",
-          ]}
+          colors={["#FFFFFF", "#808080", "#FFFFFF"]}
           animationSpeed={5}
           showBorder={false}
           className="text-3xl md:text-5xl font-bold text-center font-head"
