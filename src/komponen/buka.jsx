@@ -13,7 +13,7 @@ const Buka = () => {
 
   // Effect untuk menangani refresh halaman dan gulir ke atas
   useEffect(() => {
-    // Matikan scroll restoration bawaan browser
+    // Matikan scroll diawal muat halaman
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
